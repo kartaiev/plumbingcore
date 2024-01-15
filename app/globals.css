@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -10,18 +11,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-hex: #2f3035;
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background-rgb: 238, 238, 238;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100vh;
+  font-family: 'Big Shoulders Display';
+  color: rgb(var(--color-hex));
+  background: rgb(var(--background-rgb));
+}
+
+.logo {
+  font-family: var(--font-noto);
 }
