@@ -1,7 +1,8 @@
 import { Transition } from 'framer-motion'
-import { VariantEnum } from '.'
+import { VariantEnum, PositionEnum } from '.'
 
 export type HamburgerLineType = {
+  position: PositionEnum
   coordinates: CoordinatesType
   variants: {
     [VariantEnum.OPENED]: HamburgerLineVariantType

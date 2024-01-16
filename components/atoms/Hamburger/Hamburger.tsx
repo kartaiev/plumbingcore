@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion'
 import { FC } from 'react'
-import { HamburgerProps, VariantEnum, hamburgerLinesData } from '.'
+import {
+  HamburgerProps,
+  VariantEnum,
+  defaultDimensions,
+  hamburgerLinesData,
+} from '.'
 
 export const Hamburger: FC<HamburgerProps> = ({
   isOpen = false,
-  width = 24,
-  height = 24,
+  width = defaultDimensions.width,
+  height = defaultDimensions.hight,
   strokeWidth = 1,
   color = '#000',
   transition,
@@ -18,8 +23,9 @@ export const Hamburger: FC<HamburgerProps> = ({
       width={width}
       height={height}
     >
-      {hamburgerLinesData.map(({ coordinates, variants }) => (
+      {hamburgerLinesData.map(({ coordinates, variants, position }) => (
         <motion.line
+          key={position}
           x1={coordinates.x1}
           x2={coordinates.x2}
           y1={coordinates.y1}

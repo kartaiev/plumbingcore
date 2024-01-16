@@ -5,8 +5,20 @@ export enum VariantEnum {
   OPENED = 'opened',
 }
 
+export enum PositionEnum {
+  TOP = 'top',
+  CENTER = 'center',
+  Bottom = 'bottom',
+}
+
+export const defaultDimensions = {
+  hight: 24,
+  width: 24,
+}
+
 export const hamburgerLinesData: HamburgerLineType[] = [
   {
+    position: PositionEnum.TOP,
     coordinates: {
       x1: 0,
       x2: 4,
@@ -25,6 +37,7 @@ export const hamburgerLinesData: HamburgerLineType[] = [
     },
   },
   {
+    position: PositionEnum.CENTER,
     coordinates: {
       x1: 0,
       x2: 4,
@@ -41,6 +54,7 @@ export const hamburgerLinesData: HamburgerLineType[] = [
     },
   },
   {
+    position: PositionEnum.Bottom,
     coordinates: {
       x1: 0,
       x2: 4,
