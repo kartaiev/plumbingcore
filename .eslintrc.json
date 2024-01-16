@@ -1,6 +1,20 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:storybook/recommended"
-  ]
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "plugin:storybook/recommended",
+    "prettier"
+  ],
+  "plugins": ["react-hooks", "prettier"],
+  "rules": {
+    "no-magic-numbers": "off",
+    "@typescript-eslint/no-magic-numbers": [
+      "warn",
+      {
+        "ignoreArrayIndexes": true,
+        "ignore": [0, 1]
+      }
+    ]
+  }
 }
